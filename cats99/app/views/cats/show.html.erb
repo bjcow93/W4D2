@@ -1,0 +1,16 @@
+<table>
+  <caption>Take a look at this cat</caption>
+  <tr>
+    <th>Birth Date</th>
+    <th>Color</th>
+    <th>Name</th>
+    <th>Sex</th>
+    <th>Description</th>
+  </tr>
+
+  <% [:birth_date, :color, :name, :sex, :description].each do |attr| %>
+    <tr>
+      <td><%= @cat.send(attr) %></td>
+    </tr>
+  <% end %>
+</table>
